@@ -41,7 +41,9 @@ plugin_var_prefixes | while IFS='=' read -r prefix _ ; do
   printenv | sort
   echo "$prefix"
   echo "$password_var"
+  echo "000"
   echo "$password_env_var"
+  echo "123"
   echo "${login_args[@]}"
   echo "${!password_var:-}"
   docker login "${login_args[@]}" <<< "${!password_var:-}"
